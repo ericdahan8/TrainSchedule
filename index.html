@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="Assets/style.css" />
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1 class="display-4">Train Schedule</h1>
+      <p class="lead">
+        Choo Choo
+      </p>
+      <hr class="my-4" />
+      <p></p>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Add Train</h2>
+          <form>
+            <div class="row">
+              <div class="col">
+                <input
+                  id="Train Name"
+                  type="text"
+                  class="form-control"
+                  placeholder="Train Name"
+                />
+              </div>
+              <div class="col">
+                <input
+                  id="Destination"
+                  type="text"
+                  class="form-control"
+                  placeholder="Destination"
+                />
+              </div>
+              <div class="col">
+                <input
+                  id="First Train Time"
+                  type="text"
+                  class="form-control"
+                  placeholder="First Train (Military time)"
+                />
+              </div>
+              <div class="col">
+                <input
+                  id="Frequency"
+                  type="text"
+                  class="form-control"
+                  placeholder="Frequency (Mins)"
+                />
+              </div>
+            </div>
+          </form>
+          <br />
+          <button id="submit" type="submit" class="btn btn-warning">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="container2">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Train Name</th>
+            <th scope="col">Destination</th>
+            <th scope="col">First Train Time (Military time)</th>
+            <th scope="col">Frequency (Mins)</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <footer>
+      copyright 2019
+    </footer>
+  </body>
+</html>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB1EVYFdBUBFavFMxu1rnV6mYudU3VxbJw",
+    authDomain: "trainschedule-4cd74.firebaseapp.com",
+    databaseURL: "https://trainschedule-4cd74.firebaseio.com",
+    projectId: "trainschedule-4cd74",
+    storageBucket: "trainschedule-4cd74.appspot.com",
+    messagingSenderId: "846473545848"
+  };
+  firebase.initializeApp(config);
+</script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"
+></script>
+
+<script>
+  var database = firebase.database();
+  console.log(database);
+
+  var trainName = "";
+  var Destination = "";
+  var firstTrain = "";
+  var frequency = "";
+
+  var i = 0;
+
+  $("#submit") on("click", Function ())
+</script>
